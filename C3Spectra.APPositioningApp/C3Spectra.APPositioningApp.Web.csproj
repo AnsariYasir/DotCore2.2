@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\bootstrap\dist\images\search-icon.png" />
+    <Content Remove="wwwroot\lib\jquery\dist\cof2Obj.js" />
+    <Content Remove="wwwroot\lib\jquery\dist\leaflet-search.js" />
+    <Content Remove="wwwroot\lib\jquery\dist\newGeomag.js" />
+    <Content Remove="wwwroot\lib\jquery\dist\syncXHR.js" />
+    <Content Remove="wwwroot\WMM.txt" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="NLog.Config" Version="4.6.7" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\C3Spectra.APPositioningApp.BAL\C3Spectra.APPositioningApp.BAL.csproj" />
+    <ProjectReference Include="..\C3Spectra.APPositioningApp.Common\C3Spectra.APPositioningApp.Common.csproj" />
+    <ProjectReference Include="..\C3Spectra.APPositioningApp.DAL\C3Spectra.APPositioningApp.DAL.csproj" />
+    <ProjectReference Include="..\C3Spectra.APPositioningApp.Entity\C3Spectra.APPositioningApp.Entity.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="ShapeFiles\" />
+    <Folder Include="wwwroot\APImages\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\bootstrap\dist\images\search-icon.png" />
+    <None Include="wwwroot\lib\jquery\dist\cof2Obj.js" />
+    <None Include="wwwroot\lib\jquery\dist\leaflet-search.js" />
+    <None Include="wwwroot\lib\jquery\dist\newGeomag.js" />
+    <None Include="wwwroot\lib\jquery\dist\syncXHR.js" />
+    <None Include="wwwroot\WMM.txt" />
+  </ItemGroup>
+
+</Project>

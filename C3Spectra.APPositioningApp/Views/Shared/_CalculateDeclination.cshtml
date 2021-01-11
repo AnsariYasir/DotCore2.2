@@ -1,0 +1,354 @@
+﻿
+
+@{
+    ViewBag.Title = "Calculate Declination";
+}
+
+@*<script src="~/Scripts/newGeomag.js"></script>*@
+
+@*<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>*@
+<script src="~/lib/jquery/dist/newGeomag.js"></script>
+<script src="~/lib/jquery/dist/cof2Obj.js"></script>
+@*<script src="~/Scripts/cof2Obj.js"></script>*@
+<script src="~/lib/jquery/dist/syncXHR.js"></script>
+@*<script src="~/Scripts/syncXHR.js"></script>*@
+<script>
+    /*jslint plusplus: true */
+    /*global geoMagFactory, cof2Obj, syncXHR, Element */
+    var geo = null;
+    function decimalDate2Date(ddate) {
+        'use strict';
+        var year = Math.floor(ddate),
+            daysInYear = 365 +
+                (((year % 400 === 0) || (year % 4 === 0 && (year % 100 > 0))) ? 1 : 0),
+            msInYear = daysInYear * 24 * 60 * 60 * 1000;
+        return new Date((new Date(year, 0)).valueOf() + ((ddate - year) * msInYear));
+    }
+
+    var path = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+    path += '/WMM.txt';
+    var cof = '';
+    var newGeomag = null;
+    var geoMag = null;
+
+    jQuery.get(path, function (data) {
+        cof = data;
+        newGeomag = new Geomag(cof)
+        geoMag = newGeomag.mag;
+    });
+
+
+    function runTest() {
+        'use strict';
+
+        function addAttribute(el, name, value) {
+            el.setAttribute(name, value);
+            return el;
+        }
+
+        var row,
+            calc,
+            i,
+            testValues = (function (valueFile) {
+                var i,
+                    lines = valueFile.replace(/\r/g, '').replace(/\n$/, '').split('\n'),
+                    model = lines[0],
+                    fields,
+                    values = [];
+                for (i = 2; i < lines.length; i++) {
+                    fields = lines[i].replace(/^\s+|\s+$/g, "").split(/\s+/);
+                    values.push({
+                        date: fields[0],
+                        alt: fields[1] * 3280.8399,
+                        lat: fields[2],
+                        lon: fields[3],
+                        d: fields[4],
+                        i: fields[5],
+                        h: fields[6],
+                        x: fields[7],
+                        y: fields[8],
+                        z: fields[9],
+                        f: fields[10],
+                        gv: fields[11] || null
+                    });
+                }
+                return { model: model, values: values };
+            }(syncXHR(path + '/testValues.txt')));
+
+        for (i = 0; i < testValues.values.length; i++) {
+            row = document.createElement("tr");
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode('Expected'));
+            row.appendChild(addAttribute(document.createElement("td"), "rowSpan", 2)).
+                appendChild(document.createTextNode(testValues.values[i].date));
+            row.appendChild(addAttribute(document.createElement("td"), "rowSpan", 2)).
+                appendChild(document.createTextNode(
+                    parseFloat(testValues.values[i].alt) / 3280.8399
+                ));
+            row.appendChild(addAttribute(document.createElement("td"), "rowSpan", 2)).
+                appendChild(document.createTextNode(testValues.values[i].lat));
+            row.appendChild(addAttribute(document.createElement("td"), "rowSpan", 2)).
+                appendChild(document.createTextNode(testValues.values[i].lon));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(testValues.values[i].d));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(testValues.values[i].i));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(testValues.values[i].h));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(testValues.values[i].x));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(testValues.values[i].y));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(testValues.values[i].z));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(testValues.values[i].f));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(testValues.values[i].gv || ''));
+            document.getElementById("testBody").appendChild(row);
+            calc = geoMag(parseFloat(testValues.values[i].lat),
+                parseFloat(testValues.values[i].lon),
+                parseFloat(testValues.values[i].alt),
+                decimalDate2Date(parseFloat(testValues.values[i].date)));
+            row = document.createElement("tr");
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode('Calculated'));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(calc.dec.toFixed(2)));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(calc.dip.toFixed(2)));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(calc.bh.toFixed(1)));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(calc.bx.toFixed(1)));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(calc.by.toFixed(1)));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(calc.bz.toFixed(1)));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(calc.ti.toFixed(1)));
+            row.appendChild(document.createElement("td")).
+                appendChild(document.createTextNode(
+                    calc.gv ? calc.gv.toFixed(2) : ''
+                ));
+            document.getElementById("testBody").appendChild(row);
+        }
+    }
+
+    function calculate() {
+        //alert('test');
+        //alert(document.getElementById("lat").value)
+        //alert(document.getElementById("lon").value)
+        //alert(document.getElementById("alt").value)
+        'use strict';
+        var lat = parseFloat(document.getElementById("lat").value),
+            lon = parseFloat(document.getElementById("lon").value),
+            alt = parseFloat(document.getElementById("alt").value);
+        var myGeoMag = geoMag(lat, lon, alt);
+        //alert(alt);
+        //alert(lon);
+        //alert(alt);
+        geo = convertUptoDecimal3(myGeoMag.dec);
+        // document.getElementById("var").innerHTML = geo + $('#tbdegree').show();
+       // $('#var').html('HAAT:' + geo + " " + $('#tbdegree').html());
+       // $("#var").prop('value', 'HAAT:' +' '+ geo ); 
+        $.ajax({
+
+            url: "https://geo.fcc.gov/api/contours/haat.json?lat=" + $('#lat').val() + "&lon=" + $('#lon').val() + "&nradial=" + $('#txtnradial').val() + "&rcamsl=" + $('#txtrcamsl').val() + "&src=" + $('#drpSrc').val() + "&unit=" + $('#drpUnit').val(),
+            
+            success: function (data) {
+               // $('#lblHAATAvg').text('HAAT:' + data.features[0].properties.haat_average);
+                 $("#lblHAATAvg").prop('value', 'HAAT:' +' '+ data.features[0].properties.haat_average ); 
+                 $("#var").prop('value', 'Declination:' +' '+ geo ); 
+              //  $('#var').html('HAAT:' + geo + " " + $('#tbdegree').html());
+            },
+            error: function (a, b, c) {
+                alert('An error occured. Please try after sometime');
+                //currentMarker = null;
+            }
+        });
+        //$('#var').html(geo + " " + $('#tbdegree').html());
+        
+    }
+
+    function convertUptoDecimal3(digit) {
+        var res = parseFloat(digit).toFixed(3);
+        return res;
+    }
+
+    function init() {
+        'use strict';
+        document.getElementById('calculate').onclick = calculate;
+        runTest();
+    }
+
+    $(document).ready(function () {
+        $('#calculate').click(function (e) {
+           
+            calculate();
+            e.preventDefault();
+        });
+
+    });
+</script>
+
+<style>
+    .label-control {
+        line-height: 1.3em;
+    }
+
+    .group_form {
+        overflow: hidden;
+        margin: 10px 0;
+    }
+</style>
+
+
+
+
+
+<div class="row">
+    <!-- popup -->
+    <div class="outdoor-access-out calculation-section-outer">
+        <div class="calculation-section">
+            <div class="calculation-top-part">
+                <h4>Declination &amp; HAAT</h4>
+            </div>
+            <div class="calculation-gps-section">
+                <p>GPS</p>
+                <span class="gps-right-icon">
+                    <svg class="Ellipse_55_A82_Ellipse_1180 gps-icon">
+                        <ellipse fill="rgba(255,255,255,1)" stroke="rgba(255,148,69,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Ellipse_55" rx="7" ry="7" cx="7" cy="7">
+                        </ellipse>
+                    </svg>
+                    <svg class="Line_31_A82_Line_717 gps-icon2">
+                        <path fill="transparent" stroke="rgba(255,148,69,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" shape-rendering="auto" id="Line_31" d="M 0 0 L 0 12">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+            <div class="Declination-table-outer">
+                <div class="col-xs-12 pade-none sign-in-form">
+                    <form method="POST">
+                        <div class="col-xs-12 pade-none calcution-botton-part">
+                            <div class="col-xs-6 pade-none sign-in-form-field Latitude-inner">
+                                <label class="control-label" for="inputNormal">Latitude</label>
+                                @*<input type="text" class="form-control" id="inputNormal1" placeholder="">*@
+                                <input class="form-control" type="text" id="lat" value="40" placeholder="" />
+                            </div>
+                            <div class="col-xs-6 pade-none sign-in-form-field Latitude-inner">
+                                <label class="control-label" for="inputNormal">Longitude</label>
+                                @*<input type="text" class="form-control" id="inputNormal2" placeholder="">*@
+                                <input type="text" class="form-control" id="lon" value="-80" placeholder="" />
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pade-none calcution-botton-part">
+                            <div class="col-xs-6 pade-none sign-in-form-field">
+                                <!-- <div class="background-select-Source"> -->
+                                <!-- <label class="control-label" for="inputNormal">Source</label> -->
+                                <!-- <select  class="form-control"> -->
+                                <!-- <option>Source</option> -->
+                                <!-- <option>Source1</option> -->
+                                <!-- <option>Source2</option> -->
+                                <!-- <option>Source3</option> -->
+                                <!-- </select> -->
+                                <!-- </div>	 -->
+                                <label class="control-label" for="inputNormal22">Source</label>
+                                @*<select class="form-control" id="inputNormal22">
+                                        <option></option>
+                                        <option>Source 1</option>
+                                        <option>Source 2</option>
+                                        <option>Source 3</option>
+                                        <option>Source 4</option>
+                                        <option>Source 5</option>
+                                    </select>*@
+
+                                <select class="form-control" id="drpSrc" name="src">
+                                    <option value="0">Select Source</option>
+                                    <option value="ned_1">ned_1</option>
+                                    <option value="ned_2">ned_2</option>
+                                    <option value="globe30">globe30</option>
+                                </select>
+
+                            </div>
+                            <div class="col-xs-6 pade-none sign-in-form-field">
+                                <!-- <div class="background-select-Source"> -->
+                                <!-- <label class="control-label" for="inputNormal">Unit</label>						 -->
+                                <!-- <select class="form-control"> -->
+                                <!-- <option>Meters</option> -->
+                                <!-- <option>Meters</option> -->
+                                <!-- <option>Meters</option> -->
+                                <!-- <option>Meters</option> -->
+                                <!-- </select> -->
+                                <!-- </div>	 -->
+                                <label class="control-label" for="inputNormal22">Unit</label>
+                                @*<select class="form-control" id="inputNormal22">
+                                        <option></option>
+                                        <option>Meters 1</option>
+                                        <option>Meters 2</option>
+                                        <option>Meters 3</option>
+                                        <option>Meters 4</option>
+                                        <option>Meters 5</option>
+                                    </select>*@
+                                <select class="form-control" id="drpUnit" name="unit">
+                                    <option selected="" value="m">m (default)</option>
+                                    <option value="mi">mi</option>
+                                    <option value="ft">ft</option>
+                                </select>
+
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pade-none declination-content-section">
+                            <div class="col-xs-4 pade-none sign-in-form-field focused">
+                                <div class="table-calcule">
+                                    <label class="control-label" for="inputNormal">RCAMSL</label>
+                                    @*<input type="text" class="form-control" id="inputNormal2" value="1000">*@
+
+                                    <input class="form-control" type="text" id="txtrcamsl" value="0" />
+                                </div>
+                            </div>
+                            <div class="col-xs-4 pade-none sign-in-form-field focused">
+                                <div class="table-calcule">
+                                    <label class="control-label" for="inputNormal">No. Radials</label>
+                                    @*<input type="text" class="form-control" id="inputNormal2" value="24">*@
+
+                                    <input class="form-control" type="text" id="txtnradial" value="0" />
+                                </div>
+                            </div>
+                            <div class="col-xs-4 pade-none sign-in-form-field focused">
+                                <div class="table-calcule">
+                                    <label class="control-label" for="inputNormal">Altitude (ft)</label>
+                                    @*<input type="text" class="form-control" id="inputNormal2" value="2400">*@
+                                    <input class="form-control" type="text" id="alt" value="0" />
+                                    @*<span>(feet)</span>*@
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 pade-none update-password-profile-button light-blue-background light-gray-background calculation-btn-table">
+                            @*<input type="submit" id="calculate" value="Calculate" class="custom-button" name="update-password">*@
+                            <button  class="custom-button" id="calculate" name="update-password">Calculate</button>
+                        </div>
+
+                        <div class="col-xs-12 pade-none Declination-botton-bottom">
+                            <div class="col-xs-6 pade-none update-password-profile-button light-blue-background light-gray-background">
+                                <input type="button" id="var" value="Declination:" class="custom-button" name="update-password">
+                            </div>
+                            <div class="col-xs-6 pade-none update-password-profile-button light-blue-background light-gray-background">
+                                <input type="button" id="lblHAATAvg" value="HAAT:" class="custom-button" name="update-password">
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popup -->
+
+</div>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\C3Spectra.APPositioningApp.Common\C3Spectra.APPositioningApp.Common.csproj" />
+    <ProjectReference Include="..\C3Spectra.APPositioningApp.DAL\C3Spectra.APPositioningApp.DAL.csproj" />
+    <ProjectReference Include="..\C3Spectra.APPositioningApp.Entity\C3Spectra.APPositioningApp.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

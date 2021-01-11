@@ -1,0 +1,187 @@
+﻿
+@using Microsoft.AspNetCore.Http
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*<title>@ViewData["Title"] - C3Spectra.APPositioningApp</title>*@
+
+
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/media.css">
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+    <link rel="SHORTCUT ICON" href="http://45.63.16.67/~webchefz/devsites/Spectra/images/favicon-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/leaflet-search.css" />
+
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/jquery/dist/jquery-2.2.4.js"></script>*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>*@
+    @*<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>*@
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="~/lib/jquery/dist/TileLayer.Grayscale.js"></script>
+    <script src="~/lib/jquery/dist/leaflet-search.js"></script>
+    <script src="~/lib/jquery/dist/turf.min.js"></script>
+    <environment include="Development">
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/style.css">
+            <link rel="stylesheet" href="~/css/media.css">
+            <link rel="SHORTCUT ICON" href="http://45.63.16.67/~webchefz/devsites/Spectra/images/favicon-icon.png">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/leaflet-search.css" />*@
+    </environment>
+    @*<environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>*@
+    @*<link rel="stylesheet" href="~/css/site.css" />*@
+</head>
+@*@if (!string.IsNullOrEmpty(ViewData["ErrorMessage"].ToString()))
+    {
+        <script>
+            $(document).ready(function () {
+                var result = @Html.Raw(@ViewData["ErrorMessage"])
+                showMessage(result);
+            });
+        </script>
+    }*@
+
+<body>
+    <header>
+        @*class="navbar navbar-inverse navbar-fixed-top"*@
+        <nav>
+            <div class="container">
+                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">C3Spectra.APPositioningApp</a>*@
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        @if (!string.IsNullOrEmpty(@Context.Session.GetString("NAME")))
+                        {
+
+                            @Html.ActionLink("Change Password", "ChangePassword", "Account", new { area = "", Style = "float:right" }, new { @class = "navbar-brand" })
+                            @Html.ActionLink("Logout", "Logout", "Account", new { area = "", Style = "float:right" }, new { @class = "navbar-brand" })
+                        }
+                    </ul>
+                    @*@Html.Partial("_LoginPartial")*@
+                </div>
+
+
+                @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>*@
+                @*<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+
+                            @if (@Context.Session.GetString("NAME") != null)
+                            {
+                                @Html.ActionLink("Change Password", "ChangePassword", "Account", new { area = "", Style = "float:right" }, new { @class = "navbar-brand" })
+                                @Html.ActionLink("Logout", "Logout", "Account", new { area = "", Style = "float:right" }, new { @class = "navbar-brand" })
+                            }
+                        </ul>
+                    </div>*@
+
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+
+
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            @*&copy; 2019 - C3Spectra.APPositioningApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+            <p>&copy; @DateTime.Now.Year - C3Spectra</p>
+        </div>
+    </footer>
+
+
+    <environment include="Development">
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>
+
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+            <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+            <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+            <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+            <script src="~/lib/jquery/dist/TileLayer.Grayscale.js"></script>
+            <script src="~/lib/jquery/dist/leaflet-search.js"></script>
+            <script src="~/lib/jquery/dist/turf.min.js"></script>*@
+    </environment>
+    @*<environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>*@
+
+    <script>
+
+        $(".button-search-location").click(function () {
+            $(".search_header").toggleClass("show");
+            $("#Search_Icon").toggleClass("hide");
+            $(".close-button").toggleClass("show");
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(".cutom-close-button").click(function () {
+            $(".outdoor-access-out").hide();
+        });
+
+    </script>
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(window).load(function () {
+
+            $('.form-control').on('focus blur', function (e) {
+                $(this).parents('.sign-in-form-field').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+            }).trigger('blur');
+
+        });
+
+        //]]>
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery("#files").change(function () {
+                filename = this.files[0].name;
+                console.log(filename);
+                jQuery('.review-upload-text-field').html(filename);
+            });
+        });
+    </script>
+    @*<script src="~/js/site.js" asp-append-version="true"></script>*@
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Web.csprojAssemblyReference.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Web.csproj.CoreCompileInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Web.RazorAssemblyInfo.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Web.RazorAssemblyInfo.cs
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Web.AssemblyInfoInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Web.AssemblyInfo.cs

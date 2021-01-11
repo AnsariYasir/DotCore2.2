@@ -1,0 +1,81 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #5969ff;
+    border-color: #5969ff;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #25d5f2;
+    border-color: #25d5f2;
+}
+
+.btn-warning {
+       color: #212529;
+    background-color: #dae0e5;
+    border-color: #d3d9df;
+}
+
+
+@media only screen and (max-width: 360px) {
+
+    .btn {    width: 100%;
+    margin: 5px 0;}
+  
+}
+
+.border-top-primary {
+    border-top-color: #5969ff !important;
+}
+
+.border-top {
+    border-top: 1px solid #5969ff  !important;
+}
+
+
+.card-body {
+    
+    padding: 1.25rem;
+}
+
+.card {    margin-bottom: 30px;
+    border: none;
+    -webkit-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    -moz-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+        min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+
+
+
+}

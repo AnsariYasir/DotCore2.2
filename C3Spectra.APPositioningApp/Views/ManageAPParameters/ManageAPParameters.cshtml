@@ -1,0 +1,446 @@
+﻿@model C3Spectra.APPositioningApp.Entity.ManageAPParametersViewModal
+@{
+    ViewData["Title"] = "ManageAPParameters";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts {
+
+    @*<script src="~/Scripts/jquery.validate.js"></script>*@
+
+    @*@Scripts.Render("~/bundles/jqueryval")*@  ///
+    
+
+    @*<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+        <script src="~/Scripts/jquery-1.10.2.js"></script>*@
+}
+    
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <script>
+        alert('@ViewBag.Message');
+    </script>
+}
+
+<h2>Manage AP Parameters</h2>
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<h4 data-toggle="collapse" data-target="#divInstallationParametersBody" class="btn btn-lg btn-info collapsed">Installation Parameters </h4>
+
+<div id="divInstallationParametersBody" class="collapse">
+    @using (Html.BeginForm("ManageAPParameters", "ManageAPParameters", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-lg-12 form-horizontal">
+                <div class="col-xs-12 form-group">
+                    <h2>
+                        @if (Model.InstallationParameters.InstallationParamterID == 0)
+                        {
+                            <span>Add</span>
+                        }
+                        else
+                        {
+                            <span>Update</span>
+                        }
+                        Installation Parameters
+                    </h2>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">Latitude</label>
+
+                        @Html.HiddenFor(m => m.InstallationParameters.InstallationParamterID, new { @id = "hdnInstallationParameterID" })
+                        @Html.HiddenFor(m => m.InstallationParameters.APID, new { @id = "hdnIPAPID" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(m => m.InstallationParameters.Latitude, new { htmlAttributes = new { @class = " form-control" } })
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label class="col-xs-4">Longitude</label>
+                        <div class="col-md-8">
+                            @Html.EditorFor(m => m.InstallationParameters.Longitude, new { htmlAttributes = new { @class = " form-control" } })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.Longitude, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+
+                        <label class="col-md-4">Height</label>
+                        <div class="col-md-8">
+                            @Html.EditorFor(m => m.InstallationParameters.Height, new { htmlAttributes = new { @class = " form-control" } })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.Height, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Height Type</label>
+                        <div class="col-md-8">
+
+                            @Html.DropDownListFor(m => m.InstallationParameters.HeightTypeID, Model.InstallationParameters.HeightTypes, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.HeightTypeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+
+                        <label class="col-md-4">Horizontal Accuracy</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.InstallationParameters.HorizontalAccuracy, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.HorizontalAccuracy, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Vertical Accuracy</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.InstallationParameters.VerticalAccuracy, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.VerticalAccuracy, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Indoor Deployment</label>
+                        @Html.CheckBoxFor(m => m.InstallationParameters.IndoorDeployment, new { @class = "col-md-8 " })
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Antenna Azimuth</label>
+                        <div class="col-md-8">
+
+                            @*@Html.EditorFor(m => m.AntennaAzimuth, new { htmlAttributes = new { @class = "col-xs-6 form-control" } })*@
+                            @Html.TextBoxFor(m => m.InstallationParameters.AntennaAzimuth, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.AntennaAzimuth, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Antenna Gain</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.InstallationParameters.AntennaGain, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.AntennaGain, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Eirp Capability</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.InstallationParameters.EripCapability, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.EripCapability, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Antenna Beamwidth</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.InstallationParameters.AntennaBeamwidth, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.AntennaBeamwidth, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Antenna Model</label>
+                        <div class="col-md-8">
+
+                            @Html.DropDownListFor(m => m.InstallationParameters.AntennaModelID, Model.InstallationParameters.AntennaModels, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.InstallationParameters.AntennaModelID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="row">
+            <div class="col-md-6" style="width:800px; margin:0 auto">
+                <div class="form-group">*@
+        <button type="submit" class="btn btn-default" name="btnIPSaveAsDraft" id="btnIPSaveAsDraft">Save As Draft</button>
+
+        <button type="submit" class="btn btn-default" name="btnIPSubmit" onclick="return confirm('Save changes in Submitted mode?');" id="btnSubmit">Submit</button>
+
+        <button type="button" class="btn btn-default" id="btnIPDelete">Delete</button>
+        @*</div>*@
+        @*</div>
+            </div>*@
+    }
+</div>
+<br />
+<br />
+
+<h4 data-toggle="collapse" data-target="#divOptionalParametersBody" class="btn btn-lg btn-info collapsed">Optional Parameters </h4>
+
+<div id="divOptionalParametersBody" class="collapse">
+
+    @using (Html.BeginForm("ManageAPParameters", "ManageAPParameters", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-lg-12 form-horizontal">
+                <div class="col-xs-12 form-group">
+                    <h3>
+                        @if (Model.OptionalParameters.OptionalParameterID == 0)
+                        {
+                            <span>Add</span>
+                        }
+                        else
+                        {
+                            <span>Update</span>
+                        }
+                        Optional Parameters
+                    </h3>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">CallSign</label>
+                        @Html.HiddenFor(x => x.OptionalParameters.OptionalParameterID, new { @id = "hdnOptionalParameterID" })
+                        @Html.HiddenFor(x => x.OptionalParameters.APID, new { @id = "hdnOPAPID" })
+                        <div class="col-md-8">
+                            @Html.DropDownListFor(m => m.OptionalParameters.CallSignID, Model.OptionalParameters.CallSigns, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.OptionalParameters.CallSignID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">Cbsd Info</label>
+                        <div class="col-md-8">
+                            @Html.DropDownListFor(m => m.OptionalParameters.CbsdInfoID, Model.OptionalParameters.CbsdInfos, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.OptionalParameters.CbsdInfoID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">GroupingParam</label>
+                        <div class="col-md-8">
+                            @Html.DropDownListFor(m => m.OptionalParameters.GroupingParamID, Model.OptionalParameters.GroupingParams, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.OptionalParameters.GroupingParamID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">&nbsp;</label>
+                        <label class="col-xs-8">&nbsp;</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="row">
+            <div class="col-md-6" style="width:800px; margin:0 auto">
+                <div class="form-group">*@
+        <button type="submit" class="btn btn-default " name="btnOPSaveAsDraft" id="btnSaveAsDraft">Save As Draft</button>
+        <button type="submit" class="btn btn-default " name="btnOPSubmit" onclick="return confirm('Save changes in Submitted mode?');" id="btnSubmit">Submit</button>
+        <button type="button" class="btn btn-default " id="btnOPDelete">Delete</button>
+        @*</div>
+            </div>
+            </div>*@
+    }
+</div>
+
+<br />
+
+<br />
+
+<h4 data-toggle="collapse" data-target="#divCBSDBody" class="btn btn-lg btn-info collapsed">CBSD Parameters </h4>
+
+<div id="divCBSDBody" class="collapse">
+    @using (Html.BeginForm("ManageAPParameters", "ManageAPParameters", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-lg-12 form-horizontal">
+                <div class="col-xs-12 form-group">
+                    <h3>
+                        @if (Model.CBSD.CBSDID == 0)
+                        {
+                            <span>Add</span>
+                        }
+                        else
+                        {
+                            <span>Update</span>
+                        }
+                        CBSD
+                    </h3>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">CBSDVendorModel</label>
+                        @Html.HiddenFor(x => x.CBSD.CBSDID, new { @id = "hdnCBSDID" })
+                        @Html.HiddenFor(x => x.CBSD.APID, new { @id = "hdnCBSDAPID" })
+                        @*@Html.EditorFor(x => x.Vendor, new { htmlAttributes = new { @class = "col-xs-6 form-control" } })*@
+                        <div class="col-md-8">
+                            @Html.DropDownListFor(m => m.CBSD.CBSDVendorModelID, Model.CBSD.CBSDVendorModels, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.CBSD.CBSDVendorModelID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">SoftwareVersion</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.CBSD.SoftwareVersion, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.CBSD.SoftwareVersion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">HardwareVersion</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.CBSD.HardwareVersion, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.CBSD.HardwareVersion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-xs-4">FirmwareVersion</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.CBSD.FirmwareVersion, new { @class = " form-control" })
+                            @Html.ValidationMessageFor(m => m.CBSD.FirmwareVersion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="row">
+            <div class="col-md-6" style="width:800px; margin:0 auto">
+                <div class="form-group">*@
+        <button type="submit" class="btn btn-default " name="btnCBSDSaveAsDraft" id="btnSaveAsDraft">Save As Draft</button>
+
+        <button type="submit" class="btn btn-default " name="btnCBSDSubmit" onclick="return confirm('Save changes in Submitted mode?');" id="btnSubmit">Submit</button>
+
+        <button type="button" class="btn btn-default " id="btnCBSDDelete">Delete</button>
+        @*</div>
+                </div>
+            </div>*@
+    }
+</div>
+@*}*@
+<br />
+
+<button type="button" class="btn btn-default" id="btnback">Back</button>
+<script>
+    $(document).ready(function () {
+        $('#btnIPDelete').click(function () {
+            var res = confirm('Delete this Floor information?');
+
+            if (res) {
+                var installationParameterID = $('#hdnInstallationParameterID').val();
+                $.ajax({
+                    url: "../Home/DeleteInstallationParameters",
+                    data: { "installationParameterID": installationParameterID },
+                    success: function (data) {
+                        if (data.Result) {
+                            alert('Installation Parameters information deleted successfully');
+                            var curURL = window.location.href.split('?')[0]
+                            var apid = getQueryStringByParameter(window.location.search, 'apid');
+                            curURL = curURL + "?apid=" + apid;
+                            window.location.replace(curURL);
+                        }
+                    },
+                    error: function (a, b, c) {
+                        alert('An error occured. Please try after sometime');
+                    }
+                });
+            }
+
+        });
+
+        $('#btnback').click(function () {
+            if(@ViewBag.floorID != 0) {
+                 window.location.href = "../Home/IndoorStep2?floorID=" + @ViewBag.floorID;
+            }else
+            {
+                window.location.href = "../Home/OutdoorStep1";
+            }
+
+            });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#btnOPDelete').click(function () {
+            var res = confirm('Delete this Optional Parameter information?');
+
+            if (res) {
+                var optionalParameterID = $('#hdnOptionalParameterID').val();
+                $.ajax({
+                    url: "../Home/DeleteOptionalParameters",
+                    data: { "optionalParameterID": optionalParameterID },
+                    success: function (data) {
+                        if (data.Result) {
+                            alert('Optional Parameters information deleted successfully');
+                            var curURL = window.location.href.split('?')[0]
+                            var apid = getQueryStringByParameter(window.location.search, 'apid');
+                            curURL = curURL + "?apid=" + apid;
+                            window.location.replace(curURL);
+                        }
+                    },
+                    error: function (a, b, c) {
+                        alert('An error occured. Please try after sometime');
+                    }
+                });
+            }
+
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#btnCBSDDelete').click(function () {
+            var res = confirm('Delete this Optional Parameter information?');
+
+            if (res) {
+                var CBSDID = $('#hdnCBSDID').val();
+                $.ajax({
+                    url: "../Home/DeleteCBSD",
+                    data: { "cbsdID": CBSDID },
+                    success: function (data) {
+                        if (data.Result) {
+                            alert('CBSD information deleted successfully');
+                            var curURL = window.location.href.split('?')[0]
+                            var apid = getQueryStringByParameter(window.location.search, 'apid');
+                            curURL = curURL + "?apid=" + apid;
+                            window.location.replace(curURL);
+                        }
+                    },
+                    error: function (a, b, c) {
+                        alert('An error occured. Please try after sometime');
+                    }
+                });
+            }
+
+        });
+    });
+</script>
+
+

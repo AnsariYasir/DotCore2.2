@@ -1,0 +1,9 @@
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.deps.json
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csprojAssemblyReference.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csproj.CoreCompileInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfoInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfo.cs
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb

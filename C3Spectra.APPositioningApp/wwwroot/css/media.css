@@ -1,0 +1,326 @@
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) 
+{
+
+}
+
+
+@media only screen and (min-width: 640px) and (max-width: 767px) 
+{
+.map-view iframe {	height: 400px;}
+.location-info-main {margin: -12px 0 0 0;}
+.map-inner {	width: 100%;}
+.add-cpe-button a {padding: 11px 14px;font-size: 13px;margin: 0 4px;}
+.lake-image {width: 30%;}
+.location-info-right {width: 70%;padding: 3px 0px 10px 10px;}
+.location-info-right h5 {font-size: 18px;}
+.status-out {font-size: 16px;margin: 5px 0 0 0;}
+.status-out ul li {font-size: 14px;width: 50%;}
+.location-setting {margin-top: 11px;}
+.location-setting span {height: 40px;width: 40px;margin: 0 13px 0 0;}
+.location-setting span.setting-icon svg {width: 18px;}
+.location-setting span.delete-icon svg {width: 14px;}
+.location-setting span.edit-icon svg {width: 16px;}
+.location-setting span.wifi-icon .Path_310 {	top: 0px;left: 0px;width: 20px;height: 5.694px;}
+.location-setting span.wifi-icon .Path_311 {top: 5.04px;left: 3.518px;width: 12.947px;height: 4.242px;}
+.location-setting span.wifi-icon .Path_312 {top: 9.984px;left: 7.248px;width: 5.495px;height: 4.016px;}
+.location-setting span.wifi-icon samp {width: 22px;top: 13px;left: 1px;}
+.add-cpe-button a svg {width: 18px;margin-right: 2px;height: 20px;}
+.add-cpe-button {margin: 0 2px;}
+.location-info-inner-out {padding: 15px;}
+
+/* Outdoor Search Suggestions Start */
+.cont-parameter-bttns a {
+    width: 155px;
+	padding: 15px 5px;
+}
+/* Outdoor Search Suggestions End */
+
+
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 639px) 
+{
+.map-view iframe {	height: 380px;}
+.location-info-main {;margin: -12px 0 0 0;}
+.map-inner {	width: 100%;}
+.add-cpe-button a {padding: 12px 17px;font-size: 14px;margin: 0 4px;}
+.lake-image {width: 30%;}
+.location-info-right {width: 70%;padding: 3px 0px 10px 10px;}
+.location-info-right h5 {font-size: 18px;}
+.status-out {font-size: 16px;margin: 5px 0 0 0;}
+.status-out ul li {font-size: 14px;width: 50%;}
+.location-setting {margin-top: 11px;}
+.location-setting span {height: 40px;width: 40px;margin: 0 13px 0 0;}
+.location-setting span.setting-icon svg {width: 18px;}
+.location-setting span.delete-icon svg {width: 14px;}
+.location-setting span.edit-icon svg {width: 16px;}
+.location-setting span.wifi-icon .Path_310 {	top: 0px;left: 0px;width: 20px;height: 5.694px;}
+.location-setting span.wifi-icon .Path_311 {top: 5.04px;left: 3.518px;width: 12.947px;height: 4.242px;}
+.location-setting span.wifi-icon .Path_312 {top: 9.984px;left: 7.248px;width: 5.495px;height: 4.016px;}
+.location-setting span.wifi-icon samp {width: 22px;top: 13px;left: 1px;}
+.add-cpe-button a svg {width: 18px;margin-right: 2px;height: 20px;}
+.add-cpe-button {margin: 0 2px;}
+.location-info-inner-out {padding: 15px;}
+.on-map-option-outer .on-map-option-grid {
+	height: 40px;width: 40px;margin: 0 0 7px 0;}
+.on-map-option-outer .on-map-option-grid.button-map-location svg {width: 32px;height: 33px;top: 7px;}
+.on-map-option-outer .on-map-option-grid.button-map-setting svg {width: 20px;}
+.on-map-option-outer .on-map-option-grid.button-search-location svg {width: 15px;height: 27px;top: 7px;}
+.on-map-option-outer {width: 40px;right: 13px;}
+.on-map-option-outer .search_header.show {
+	width: 250px;}
+.on-map-option-outer .search_header {right: 14px;height: 40px;border-radius: 30px;padding: 0 42px 0 0;}	
+.on-map-option-outer .search_header .search-input-icon {width: 15px;top: 14px;left: 18px;height: 19px;}	
+.on-map-option-outer .close-button svg {
+	width: 12px !important;
+}	
+.main-inner {
+	overflow-x: hidden;
+}
+.main-inner.login-main-out header.Sign-in-logo img {
+	width: 100px;
+}
+.sass-logo {width: 49%;}
+.sass-logo.google-logo svg {width: 90px;}
+.sass-logo {padding: 7px;}
+
+/* Outdoor Search Suggestions Start */
+.cont-parameter-bttns a {
+    width: 155px;
+	padding: 15px 5px;
+}
+/* Outdoor Search Suggestions End */
+
+
+
+
+}
+
+
+@media only screen and (max-width: 479px) 
+{
+.map-view iframe {	height: 370px;}
+.location-info-main {;margin: -12px 0 0 0;}
+.map-inner {	width: 100%;}
+.add-cpe-button a {padding: 11px 14px;font-size: 13px;margin: 0 4px;}
+.lake-image {width: 30%;}
+.location-info-right {width: 70%;padding: 3px 0px 10px 15px;}
+.location-info-right h5 {font-size: 18px;}
+.status-out {font-size: 16px;margin: 5px 0 0 0;}
+.status-out ul li {font-size: 14px;width: 50%;}
+.location-setting {margin-top: 10px;}
+.location-setting span {height: 40px;width: 40px;margin: 0 13px 0 0;}
+.location-setting span.setting-icon svg {width: 18px;}
+.location-setting span.delete-icon svg {width: 14px;}
+.location-setting span.edit-icon svg {width: 16px;}
+.location-setting span.wifi-icon .Path_310 {	top: 0px;left: 0px;width: 20px;height: 5.694px;}
+.location-setting span.wifi-icon .Path_311 {top: 5.04px;left: 3.518px;width: 12.947px;height: 4.242px;}
+.location-setting span.wifi-icon .Path_312 {top: 9.984px;left: 7.248px;width: 5.495px;height: 4.016px;}
+.location-setting span.wifi-icon samp {width: 22px;top: 13px;left: 1px;}
+.add-cpe-button a svg {width: 18px;margin-right: 2px;height: 20px;}
+.add-cpe-button {margin: 0 2px;}
+.location-info-inner-out {padding: 10px 10px;}
+.on-map-option-outer .on-map-option-grid {
+	height: 40px;width: 40px;margin: 0 0 7px 0;}
+.on-map-option-outer .on-map-option-grid.button-map-location svg {width: 32px;height: 33px;top: 7px;}
+.on-map-option-outer .on-map-option-grid.button-map-setting svg {width: 20px;}
+.on-map-option-outer .on-map-option-grid.button-search-location svg {width: 15px;height: 27px;top: 7px;}
+.on-map-option-outer {width: 40px;right: 13px;}
+.on-map-option-outer .search_header.show {width: 250px;}
+.on-map-option-outer .search_header {right: 14px;height: 40px;border-radius: 30px;padding: 0 42px 0 0;}	
+.on-map-option-outer .search_header .search-input-icon {width: 15px;top: 14px;left: 18px;height: 19px;}	
+.on-map-option-outer .close-button svg {width: 12px !important;}
+.number-section-outer li {margin: 0 6% 0 0;}
+.number-section-outer li a svg {width: 30px;height: 30px;}
+.main-inner {overflow-x: hidden;}
+.sign-in-featured-out {min-height: 180px;}
+.main-inner.login-main-out header.Sign-in-logo img {width: 100px;}
+.outdoor-confirmation-popup .outdoor-access-out {width: 330px;}
+.sass-logo {width: 49%;}
+.sass-logo.google-logo svg {width: 75px;}
+.select-box-section select {
+	background: url(../images/checked.png) 95.22% center no-repeat;
+	font-size: 15px;
+	background-size: 15px;
+}
+.select-box-section select {padding: 12px 10px 12px; height: 50px;}
+/* 30-oct css start */
+.select-setting-option h5 {
+	margin: 8px 0px 11px;
+}
+.sass-logo {
+	height: 50px;
+	padding: 4px;
+}
+.popup-clicked-section label {
+	font-size: 13px;
+}
+/* 30-oct css End */
+
+/* Outdoor Search Suggestions Start */
+.cont-place-info h5 {
+	font-size: 15px;
+}
+.parameter-bttns-midd {
+	margin: 10px 0 0 0;
+}
+.cont-parameter-bttns a {
+    width: 155px;
+	padding: 15px 5px;
+}
+/* Outdoor Search Suggestions End */
+
+
+.select-option-logout {
+	background-size: 16px;
+	background-position: right 10px top 20px;
+}
+.profile-view-main-section p {
+	padding: 4px 10px 7px;
+}
+.select-option-logout {
+	padding: 13px 0 5px;
+}
+.hr-border {
+	margin: 28px 0 17px;
+	width: 98%;
+}
+.setting-select-sass-main {
+	margin-top: -8px;
+}
+.profile-view-main-section {
+	background-size: 10px;
+	background-position: right 10px top 7px;
+}
+.cont-search-results {
+	max-height: 305px;	
+}
+.popup-clicked-section label {
+	font-size: 14px !important;
+}
+.popup-clicked-section span {
+	background-size: 20px !important;
+	margin: 0 0px 0 !important;
+}
+.popup-clicked-section {
+	margin-right: 10px !important;
+}
+.custom-button {
+	padding: 13px 20px;
+}
+.remember-password-field {
+	margin-top: 28px;
+}
+.outdoor-add-img {
+	margin-bottom: -3px;
+}
+.outdoor-add-section .on-map-frame iframe {
+	height: 510px;
+}
+.indoor-txt-left {
+	width: 65%;
+}
+.calculation-top-part {
+	width: 70%;
+}
+.sign-in-form-field label.control-label {
+	left: 10px;
+}
+.Sign-in-blank-main {
+	padding: 25px 1px;
+}
+.are-you-sure-content p {
+	margin: 10px 7px;
+}
+.blank-building-outer .container {
+	padding: 0;
+}
+.profile-info-top-main {
+	padding: 1px 1px;
+}
+.speed-test-run-detail {
+	width: 43%;
+}
+.new-floor-outer .container {
+	padding: 0;
+}
+.new-floor-outer .sign-in-form-field textarea.form-control {
+	min-height: 80px;
+}
+body .simplebar-track.simplebar-horizontal {
+	left: 0;
+	height: 7px;
+}
+body .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+	right: auto;
+	left: 0;
+	top: 0px;
+	height: 5px;
+	min-height: 0;
+	min-width: 10px;
+	width: auto;
+}
+}
+
+@media only screen and (max-width: 360px) 
+{.location-setting span {
+	margin: 0 8px 0 0;}	
+.status-out ul li {font-size: 12px;}
+.header-tabs ul.nav-tabs li a {padding: 16px 20px;font-size: 13px;font-weight: 500;width: 98%;}
+.add-cpe-button a {padding: 9px 10px;font-size: 12px;margin: 0 3px;line-height: 20px;}
+.on-map-option-outer span {
+	height: 40px;width: 40px;margin: 0 0 7px 0;}
+.on-map-option-outer .on-map-option-grid.button-map-location svg {width: 32px;height: 33px;top: 7px;}
+.on-map-option-outer .on-map-option-grid.button-map-setting svg {width: 20px;}
+.on-map-option-outer .on-map-option-grid.button-search-location svg {width: 15px;height: 27px;top: 7px;}
+.on-map-option-outer {width: 40px;right: 13px;}
+.on-map-option-outer .search_header.show {width: 250px;}
+.on-map-option-outer .search_header {right: 14px;height: 40px;border-radius: 30px;padding: 0 42px 0 0;}	
+.on-map-option-outer .search_header .search-input-icon {width: 15px;top: 14px;left: 18px;height: 19px;}	
+.on-map-option-outer .close-button svg {width: 12px !important;}	
+.number-section-outer li {margin: 0 6% 0 0;}
+.number-section-outer li a svg {width: 30px;height: 30px;}
+.main-inner {overflow-x: hidden;}
+.sign-in-featured-out {min-height: 180px;}
+.main-inner.login-main-out header.Sign-in-logo img {width: 100px;}
+.sign-in-featured-out p br{display:none;}	
+.outdoor-confirmation-popup .outdoor-access-out {width: 300px;}
+
+/* Outdoor Search Suggestions Start */
+.parameter-bttns-midd {
+	margin: 10px 0 0 0;
+	width: 100%;
+}
+.cont-parameter-bttns a {
+	width: auto;
+	padding: 12px 14px;
+}
+/* Outdoor Search Suggestions End */
+/*Indoor Page Start*/
+.single-building-info h4 {
+	font-size: 16px;
+	line-height: 20px;
+}
+.single-building-otr {
+    padding: 12px 6px 12px 10px;
+}
+.building-info-icon {
+    margin: 0;
+}
+.building-info-icon, .building-info-icon svg {
+    width: 12px;
+}
+.building-info-content {
+	width: calc(100% - 18px);
+	font-size: 13px;
+	line-height: 16px;
+}
+/*Indoor Page End*/
+
+}

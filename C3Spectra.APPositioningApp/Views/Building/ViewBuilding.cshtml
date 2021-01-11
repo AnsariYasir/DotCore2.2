@@ -1,0 +1,35 @@
+﻿@model C3Spectra.APPositioningApp.Entity.BuildingViewModel
+
+@{
+    ViewData["Title"] = "ViewBuilding";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+@*<br />
+    <h3>Buildings</h3>
+    <div>
+        <div style="padding:10px; float:right;">@Html.ActionLink("Create", "ManageBuilding", "Building") &nbsp;@Html.ActionLink("Back", "Dashboard", "Dashboard")</div>
+        @if (Model != null)
+        {
+            @webGrid.GetHtml(
+     htmlAttributes: new { @id = "WebGrid", @class = "Grid table-bordered table-hover table-responsive" },
+     columns: webGrid.Columns(
+                                webGrid.Column("Name", header: "Name"),
+                                webGrid.Column("Description", header: "Description"),
+                                webGrid.Column(format:@<text><a href="/Building/ManageBuilding?buildingID=@item.BuildingId">Manage</a></text> , header: "Action"),
+                                                                                                                 webGrid.Column(format:@<text><a href="/Floor/FloorList?buildingID=@item.BuildingId&Name=@item.Name">Select</a></text>, header: "Action")
+                                                                                                                                                                                                                                                                         )
+                                                                                                                                                                                                                                                                     )
+        }
+
+
+
+
+
+    </div>*@
+
+
+
+

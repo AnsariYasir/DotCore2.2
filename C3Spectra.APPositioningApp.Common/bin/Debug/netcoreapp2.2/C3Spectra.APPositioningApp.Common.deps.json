@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "8abede2c2793b4d8a89084df736411be82275d23"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "c3spectra.appositioningapp.common/1.0.0": {
+        "dependencies": {
+          "C3Spectra.APPositioningApp.DAL": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Npgsql": "4.1.1"
+        },
+        "runtime": {
+          "C3Spectra.APPositioningApp.Common.dll": {}
+        }
+      },
+      "microsoft.aspnetcore.mvc.viewfeatures/2.2.0": {},
+      "npgsql/4.1.1": {},
+      "system.configuration.configurationmanager/4.6.0": {},
+      "c3spectra.appositioningapp.dal/1.0.0": {
+        "dependencies": {
+          "Npgsql": "4.1.1",
+          "System.Configuration.ConfigurationManager": "4.6.0"
+        },
+        "runtime": {
+          "C3Spectra.APPositioningApp.DAL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "c3spectra.appositioningapp.common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "microsoft.aspnetcore.mvc.viewfeatures/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uVHF7SWJFNQsddHWug8QY4DRVrcu1d1Yfczqh3noTbDhgfyaz9PLyRgxLCEaeKyaU5G/DfTa7F4U7O0gvYrIMg==",
+      "path": "microsoft.aspnetcore.mvc.viewfeatures/2.2.0",
+      "hashPath": "microsoft.aspnetcore.mvc.viewfeatures.2.2.0.nupkg.sha512"
+    },
+    "npgsql/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hqJLc49El9sicPfEXyo3OVvQuyz3ctSJUvut54GtLqXti2Bth+zWjFSt8SoQxAICiKgYa9bnxE9ghh4ASzP/pQ==",
+      "path": "npgsql/4.1.1",
+      "hashPath": "npgsql.4.1.1.nupkg.sha512"
+    },
+    "system.configuration.configurationmanager/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z9fW5VaBVnpA2EvdVXSCYNO0P6XunzF8qAMbx9/xNUmnFI6Yux524DWj/VOA+BItt4UJuQN+czTuAMM1srLcXg==",
+      "path": "system.configuration.configurationmanager/4.6.0",
+      "hashPath": "system.configuration.configurationmanager.4.6.0.nupkg.sha512"
+    },
+    "c3spectra.appositioningapp.dal/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,14 @@
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.deps.json
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\bin\Release\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.csprojAssemblyReference.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.csproj.CoreCompileInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.AssemblyInfoInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.AssemblyInfo.cs
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.csproj.CopyComplete
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Entity\obj\Release\netcoreapp2.2\C3Spectra.APPositioningApp.Entity.pdb

@@ -1,0 +1,39 @@
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.deps.json
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csprojAssemblyReference.cache
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfoInputs.cache
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfo.cs
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.deps.json
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csproj.CoreCompileInputs.cache
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfoInputs.cache
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfo.cs
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csprojAssemblyReference.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.deps.json
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csproj.CoreCompileInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfoInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfo.cs
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csprojAssemblyReference.cache
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.deps.json
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfoInputs.cache
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfo.cs
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.deps.json
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.AssemblyInfo.cs
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.DAL\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb

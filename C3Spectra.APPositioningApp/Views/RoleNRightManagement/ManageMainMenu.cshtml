@@ -1,0 +1,60 @@
+﻿
+
+@model C3Spectra.APPositioningApp.Entity.MainMenuViewModel
+@{
+    ViewData["Title"] = "ManageMainMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Manage Main Menu</h2>
+@using (Html.BeginForm("ManageMainMenu", "RoleNRightManagement", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="col-xs-12 form-group">
+        <label>Menu Name</label>
+        @Html.HiddenFor(m => m.MainMenuId, new { @id = "hdnMainMenuID" })
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="align-center">
+        &nbsp;<button type="submit" class="btn btn-default" id="login">Save</button>
+        &nbsp;<button type="button" class="btn btn-default" id="btnDelete">Delete</button>
+        &nbsp; @Html.ActionLink("Cancel", "MainMenuList", "RoleNRightManagement", new { @class = "btn btn-default" })
+        @*&nbsp;  <button type="button" class="btn btn-default" id="btnForgotPassword">Cancel</button>*@
+    </div>
+
+}
+
+<script>
+        $(document).ready(function () {
+            $('#btnDelete').click(function () {
+                var res = confirm('Delete this MainMenu information?');
+
+                if (res) {
+                    var mainmenuID = $('#hdnMainMenuID').val();
+                    $.ajax({
+                        url: "../RoleNRightManagement/DeleteMainMenu",
+                        data: { "mainmenuID": mainmenuID },
+                        success: function (data) {
+                            if (data.Result) {
+                                alert('MainMenu information deleted successfully');
+                                window.location.href = "../RoleNRightManagement/MainMenuList";
+                                //window.location.replace("../Home/ViewBuilding");
+                            }
+                        },
+                        error: function (a, b, c) {
+                            alert('An error occured. Please try after sometime');
+                        }
+                    });
+                }
+
+            });
+
+            $('#btnback').click(function () {
+                window.location.href = "../Home/ViewBuilding";
+            });
+
+        });
+</script>
+

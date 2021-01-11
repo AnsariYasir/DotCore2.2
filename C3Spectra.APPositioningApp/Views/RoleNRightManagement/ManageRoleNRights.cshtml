@@ -1,0 +1,87 @@
+﻿
+
+@model C3Spectra.APPositioningApp.Entity.ManageRoleNRightsViewModel
+
+@{
+    ViewData["Title"] = "ManageRoleNRights";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ManageRoleNRights</h2>
+
+@using (Html.BeginForm("ManageRoleNRights", "RoleNRightManagement", FormMethod.Post))
+{
+    <div class="form-group col-md-4">
+        <label>Role</label>
+        <div class="span2 input_bottom">
+
+            @Html.DropDownListFor(m => m.RoleID, Model.RolesViewModels, new { @class = "col-xs-8 form-control", onchange = "this.form.submit();" })
+        </div>
+    </div>
+}
+@using (Html.BeginForm("SaveRoleNRights", "RoleNRightManagement", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.RoleID)
+    @*<div>
+           @Html.Partial("_RoleNrightsList", Model.RolesNRightsViewMdoels)
+        </div>*@
+    <table class="table">
+        <tr>
+            <th>
+                Main Menu Name
+            </th>
+            <th>
+                Controller Name
+            </th>
+            <th>
+                Action Name
+            </th>
+            <th>
+                Rights
+            </th>
+        </tr>
+
+        @for (var i = 0; i < Model.RolesNRightsViewMdoels.Count; ++i)
+        {
+            <tr>
+                @Html.HiddenFor(modelItem => Model.RolesNRightsViewMdoels[i].RNRID)
+                <td>
+                    @Html.HiddenFor(modelItem => Model.RolesNRightsViewMdoels[i].ActionID)
+                    @Html.DisplayFor(modelItem => Model.RolesNRightsViewMdoels[i].ActionName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.RolesNRightsViewMdoels[i].ControllerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.RolesNRightsViewMdoels[i].MainMenuName)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(modelItem => Model.RolesNRightsViewMdoels[i].IsActive)
+                </td>
+            </tr>
+        }
+
+    </table>
+    <button type="submit" class="btn btn-default" name="btnSaveRolesNRights" id="btnSaveRolesNRights">Save</button>
+}
+
+
+<script>
+    $(document).ready(function () {
+        var roleID = $('#RoleID').val();
+        if (roleID == 0) {
+            $('#btnSaveRolesNRights').hide();
+        } else {
+
+            $('#btnSaveRolesNRights').show();
+        }
+        $('#RoleID').change(function () {
+            debugger;
+            roleID = $('#RoleID').val();
+            $('#RoleIDOnChange').val(roleID);
+
+        });
+    });
+
+</script>
+

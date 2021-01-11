@@ -1,0 +1,52 @@
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.deps.json
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csprojAssemblyReference.cache
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csproj.CoreCompileInputs.cache
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfoInputs.cache
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfo.cs
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csproj.CopyComplete
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+C:\Users\sanjeev.nair\source\repos\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.deps.json
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csprojAssemblyReference.cache
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csproj.CoreCompileInputs.cache
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfoInputs.cache
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfo.cs
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csproj.CopyComplete
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+E:\Workspace-GIT\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.deps.json
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csprojAssemblyReference.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csproj.CoreCompileInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfoInputs.cache
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfo.cs
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csproj.CopyComplete
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+D:\Arshad\WorkSpace\CPI-Pro\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.deps.json
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.dll
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.DAL.pdb
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csprojAssemblyReference.cache
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfoInputs.cache
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfo.cs
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csproj.CopyComplete
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+C:\Arshad\CPIPROBACKUP_SHADAB\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\bin\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.deps.json
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.csprojResolveAssemblyReference.cache
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.AssemblyInfo.cs
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.dll
+C:\Users\Yasir Ansari\Downloads\CPI-Pro_07NOV2019\C3Spectra.APPositioningApp\C3Spectra.APPositioningApp.Common\obj\Debug\netcoreapp2.2\C3Spectra.APPositioningApp.Common.pdb

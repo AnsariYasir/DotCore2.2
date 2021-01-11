@@ -1,0 +1,134 @@
+﻿@model C3Spectra.APPositioningApp.Entity.User.UserViewModel
+@{
+    ViewData["Title"] = "Login";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spectra</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/media.css">
+    <link REL="SHORTCUT ICON" href="~/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    @*<link href="https://45.63.16.67/~webchefz/devsites/Spectra/images/checked-img.png" rel="stylesheet">
+        <link href="https://45.63.16.67/~webchefz/devsites/Spectra/images/uncheck-img.png" rel="stylesheet">*@
+
+</head>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <body>
+        <main>
+            <div class="main-inner">
+                <div class="container cutom-container">
+                    <div class="col-xs-12 pade-none Sign-in-blank-main">
+                        <header class="Sign-in-logo">
+                            <a href="#"><img src="~/images/Sign_in_spectra_logo.png" alt="Logo"></a>
+                        </header>
+
+                        <div class="col-xs-12 pade-none sign-in-featured-out">
+                            <div class="col-xs-12 pade-none sign-in-featured-inner">
+                                <h2>Welcome Back</h2>
+                                <p>Please sign in below.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 pade-none sign-in-form">
+                            <form action="" method="">
+                                <div class="col-xs-12 pade-none ">
+                                    <div class="col-xs-12 pade-none sign-in-form-field">
+                                        <label class="control-label" for="inputNormal">Username</label>
+                                        @*<input type="text" class="form-control" id="inputNormal" placeholder="" />*@
+                                        @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control" , autocomplete = "off" })
+                                        @*@Html.ValidationMessageFor(m => m.EmailAddress, "", new { @class = "text-danger" })*@
+                                    </div>
+                                    <div class="col-xs-12 pade-none sign-in-form-field">
+                                        <label class="control-label" for="inputNormal">Password</label>
+                                        @*<input type="text" class="form-control" id="inputNormal" placeholder="" />*@
+                                        @Html.TextBoxFor(m => m.password, new { @type = "password", @class = "form-control"})
+                                        @*@Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })*@
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 pade-none remember-password-field">
+                                    <div >
+                                        @*class="custom-box-outer"*@
+                                        @*<input type="checkbox" id="c1" name="cc" />*@
+
+                                        <label for="c1">
+                                            <span class="check-box-img">
+                                                @if (!string.IsNullOrEmpty(ViewBag.Username))
+                                                {
+                                                    @Html.CheckBox("Remember", htmlAttributes: new { @checked = true })
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(x => x.Remember)
+                                                }
+
+                                            </span>Remember Me
+                                        </label>
+
+                                        @*@Html.CheckBox("Remember",  new { @checked = true } )<label>Remember Me</label>*@
+                                    </div>
+                                    <a href="@Url.Action("ForgotPassword", "Account")" class="forgot-password">Forgot Password?</a>
+                                </div>
+                                <div class="col-xs-12 pade-none sign-in-login-button gray-background1">
+                                    @*<input type="submit" value="Login" class="custom-button" name="Login" />*@
+                                    <button type="submit" class="custom-button" value="Login" name="Login">Login</button>
+                                </div>
+                                <div class="col-xs-12 pade-none dont-have-account">
+                                    <span>Don't have an account? <a href="#">Sign Up</a></span>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script>
+
+            $(".button-search-location").click(function () {
+                $(".search_header").toggleClass("show");
+                $("#Search_Icon").toggleClass("hide");
+                $(".close-button").toggleClass("show");
+            });
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+
+            $(window).load(function () {
+
+                $('.form-control').on('focus blur', function (e) {
+                    $(this).parents('.sign-in-form-field').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+                }).trigger('blur');
+
+            });
+
+                      //]]>
+        </script>
+
+    </body>
+}
+</html>
+
+
+
+
+
+
+
+

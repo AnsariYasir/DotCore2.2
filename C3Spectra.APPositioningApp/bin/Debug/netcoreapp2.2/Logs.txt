@@ -1,0 +1,2 @@
+2019-10-23 15:16:38.2253|DEBUG|C3Spectra.APPositioningApp.Web.Filters.ErrorHandlingFilter|ERROR :AccountLogin
+2019-10-23 15:19:20.8498|DEBUG|C3Spectra.APPositioningApp.Web.Filters.ErrorHandlingFilter|ERROR :AccountLogin
